@@ -7,7 +7,7 @@ const {  Deletepd  } = require('../controllers/productcontrol')
 const router = express.Router();
 
 
-router.post('/product',Products)
+router.post('/products',Products)
 router.get('/getpd',getProducts)
 router.put('/update/:id',Updatepd)
 router.delete('/delete/:id',Deletepd)
