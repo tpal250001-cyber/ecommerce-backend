@@ -16,7 +16,7 @@ app.use(express.json())
 //}));
 
 app.use('/api/auth',authRoutes)
-app.use('/api',courseroutes)
+app.use('/api/auth',courseroutes)
 app.use('/api/auth',cartroutes)
 app.use('/api/auth',addressroute)
 app.use('/api/auth',getroute)
