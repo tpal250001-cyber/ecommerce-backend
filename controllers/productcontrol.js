@@ -43,7 +43,7 @@ async function getProducts(req,res){
    filter.category = category
 
     }
-const products = await Product.find(filter)
+const products = await Product.find({})
 
 res.json({
   
@@ -54,20 +54,24 @@ res.json({
 
 async function Updatepd(req,res){
 
-  
+  const id = req.params.id;
+     const body = req.body;
 
   const updated =  await Product.findByIdAndUpdate(
-   
     
-    req.params.id,
-     req.body,
-     {new :true} //return updated data
+     
+    
+    { 
+    id,
+    body,
+    new:true
+     //return updated data
     
 
     
     
 
-
+   }
   )
 
   res.json({
