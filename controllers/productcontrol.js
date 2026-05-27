@@ -43,7 +43,7 @@ async function getProducts(req,res){
    filter.category = category
 
     }
-const products = await Product.find({})
+const products = await Product.find({filter})
 
 res.json({
   
